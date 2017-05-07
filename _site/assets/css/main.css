@@ -507,6 +507,7 @@ body {
     overflow: hidden;
     text-indent: 101%;
     white-space: nowrap;
+    max-width: 140px;
     background-image: url(/assets/img/logo.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -527,8 +528,73 @@ body {
     display: block;
     text-align: right;
     padding-right: 17px; }
+  .home-wrap header .mob-nav-hamburger {
+    display: none;
+    width: 45px;
+    height: 45px;
+    margin-right: 30px;
+    -ms-flex-align: center;
+        align-items: center; }
+    .home-wrap header .mob-nav-hamburger span,
+    .home-wrap header .mob-nav-hamburger span:before,
+    .home-wrap header .mob-nav-hamburger span:after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: #2E2D33;
+      position: relative;
+      transition: all 0.3s ease-in-out; }
+    .home-wrap header .mob-nav-hamburger span:before {
+      top: 15px; }
+    .home-wrap header .mob-nav-hamburger span:after {
+      top: -18px; }
+    .home-wrap header .mob-nav-hamburger:hover span {
+      background: transparent; }
+    .home-wrap header .mob-nav-hamburger:hover span:before,
+    .home-wrap header .mob-nav-hamburger:hover span:after {
+      position: absolute;
+      top: 0px;
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      width: 35px; }
+    .home-wrap header .mob-nav-hamburger:hover span:after {
+      right: -7px; }
+    .home-wrap header .mob-nav-hamburger:hover span:before {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      right: 16px; }
+
+@media (max-width: 780px) {
+  .home-wrap header {
+    width: auto;
+    padding: 20px 0; }
+    .home-wrap header .header-postion {
+      width: auto;
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-align: center;
+          align-items: center; }
+    .home-wrap header .site-nav,
+    .home-wrap header .email-link {
+      display: none; }
+    .home-wrap header .logo {
+      height: 45px; }
+    .home-wrap header .mob-nav-hamburger {
+      display: -ms-flexbox;
+      display: flex; } }
 
 .home-wrap {
   display: -ms-flexbox;
   display: flex;
   min-height: 100vh; }
+  @media (max-width: 780px) {
+    .home-wrap {
+      display: block;
+      min-height: 0px; } }
